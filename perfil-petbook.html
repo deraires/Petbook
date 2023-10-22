@@ -1,95 +1,125 @@
-body {
-    font-family: sans-serif;
-    color: black
-}
-#menuHorizontal {
-   width: 100%; 
-   /* display: inline-block;  */ 
-   background-color: rgb(255, 255, 255);
-   color:rgb(0, 0, 0);
-   position: absolute; /* Barra letarl Fija */
-   left:0px; /* Se posiciona desde arriba */
-   top:0px;
-   height:50px; 
-   padding:5px
-}
-#logo{
-float:left;
-} 
-#menu{
-float: right;
-}
-#menu a{
-    margin-right: 50px;
-}
-#menuHorizontal ul{
-    margin:0px;
-}
-#menuVertical {
-   width:250px; 
-   /* display: inline-block;  */ 
-   background-color: lightgrey;
-   color:rgb(0, 0, 0);
-   position: absolute; /* Barra letarl Fija */
-   top:60px; /* Se posiciona desde arriba */
-   height:calc(100vh - 60px); 
-   padding:90px 30px 90px 30px
-}
+<!DOCTYPE html>
+<html lang="en">
 
-#menuVertical ul{
-    margin:10px;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-#contenedorArticulos {
-/* display: inline-block;  */
-/* background-color: lightblue ;*/
-background-color: #c8e1e5;
-padding:90px 30px 90px 30px;
-position: absolute;
-top:60px; /* Se posiciona desde arriba */
-left:310px;
-overflow:scroll;
-height: calc(100vh - 60px);
-width: calc(100% - 310px);
-/*width: calc(100% - 310px);*/
-}
+<body>
+    <!-- Menu Horizontal -->
+    <div id="new-menu" class="fixed">
+        <div id="logo">
+            <img src="img/logo-sitio.png" alt="Logo de sitio"
+                style="margin-right:100px; width:100px;vertical-align:middle" />
+        </div>
+        <div id="menu">
+            <a href="perfil-petbook.html">PERFIL</a>
+            <a href="muro-petbook.html">MURO</a>
+            <a href="galeria-petbook.html">GALERIA</a>
+        </div>
+    </div>
+    <main>
+        <div id="miSitio">
 
-#contenedorArticulos .articulo {
-margin:10px;
-}
+            <!-- Menu Vertical -->
+            <div id="menuVertical">
+                <div class="fixed">
+                    <h2>Nuestro Perfil</h2>
+                    <p>Somos Sheng-Li y Coco, dos perritos muy consentidos y queridos por nuestra familia <br></br>
+                        Conoce
+                        un poco más sobre nosotros, explora nuestro perfil</p>
+                    <br>
+                    <ol>
+                        <ld><a href="#artFoto">FOTOGRAFÍA</a></ld><br></br>
+                        <ld><a href="#artGenerales">DATOS GENERALES</a></ld><br></br>
+                        <ld><a href="#artDetalles">MÁS SOBRE NOSOTROS</a></ld><br></br>
+                    </ol>
+                </div>
+            </div>
+            <!-- Contenidos  -->
+            <div id="contenedorArticulos">
+                <h1>Estos son mis mascotas Coco y Shen-Li</h1>
+                <div id="artFoto" style="text-align:center">
+                    <img src="img/coco-sheng-li.jpg" alt="Foto de Perfil" style="width:400px;">
+                    <div>
+                        <h2>Las mascotas que ganarán tu corazón en un instante</h2>
+                    </div><br></br>
+                    <hr>
+                    </hr>
+                </div>
+                <div id="artGenerales" class="articulo">
+                    <p>Les gusta dormir, que les hagan mimos, salir a jugar y comer premios</p>
+                    <table id="artDetalles" class="articulo" style="padding-right: 50px;">
+                        <thead>
+                            <tr>
+                                <th>Sus datos:</th>
+                                <th>Sus comidas favoritas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <ol>
+                                        <p>Son mascotas de pequeño tamaño pero con mucha personalidad</p>
+                                        <li>Peso: 10 a 15 libras</li>
+                                        <li>Pollo</li>
+                                        <li>Croopies</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <p>Generalmente comen dos veces por día y prefieren comer junto a sus humanos
+                                        </p>
+                                        <li>Croquetas</li>
+                                        <li>Pollo</li>
+                                        <li>Croopies</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ol>
+                                        <p>Sus paseos favoritos</p>
+                                        <li>al parque</li>
+                                        <li>a una cabaña en la montaña</li>
+                                        <li>a la playa</li>
 
-body {
-margin: 0px;
-}
+                                    </ol>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <p>Sus pasatiempos favoritos</p>
+                                        <li>Hacer la siesta</li>
+                                        <li>Mirar por la ventana</li>
+                                        <li>Ver televisión</li>
 
-#miSitio {
-    /* margin:0px; */
-    background-color: #c8e1e5;
-    color:rgb(0, 0, 0)
-}
+                                    </ol>
+                                </td>
+                            </tr>
 
-.articulo {
-min-height: 300px;
-}
-a {
-color:black; 
-text-decoration: none;
-font-weight: bold }
-h1 {
-display: block;
-font-size: 2.5em;
-margin-block-start: 0.83em;
-margin-block-end: 0.83em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-font-weight: bolder;
-}
-h2 {
-display: block;
-font-size: 1.5em;
-margin-block-start: 0.83em;
-margin-block-end: 0.83em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-font-weight: bold;
-}
+                        </tbody>
+                    </table>
+</body>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #4b494941;
+        text-align: left;
+        padding: 8px;
+    }
+</style>
+
+</html>
